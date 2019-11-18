@@ -1,4 +1,6 @@
+#!/usr/bin/python3
 # coding: utf-8
+
 
 from pokedex.pokemon import Pokemon
 import requests
