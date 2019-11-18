@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <h1>Pokedex avec pokéAPI</h1>
+        <!--Foreach pokemon we display their name and their sprites-->
+        {% for pokemon in list_pokemon %}
+            <div>
+                <h2>{{pokemon.name}}</h2>
+                <img src={{pokemon.sprites}}>
+            </div>
+        {% endfor %}
+    </body>
+</html>
