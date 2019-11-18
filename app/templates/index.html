@@ -1,15 +1,20 @@
-<html>
-    <head>
-        <title>{{ title }}</title>
-    </head>
-    <body>
-        <h1>Pokedex avec pokéAPI</h1>
-        <!--Foreach pokemon we display their name and their sprites-->
-        {% for pokemon in list_pokemon %}
+{% extends "base.html" %}
+
+<h1>Pokedex avec pokéAPI</h1>
+{% block content %}
+    <!--Foreach pokemon we display their name and their sprites-->
+    {% set i = 0 %}
+    {% for pokemon in list_pokemon %}
+        {% if i % 3 == 0 %}
+        <div>
+        {% endif %}
             <div>
-                <h2>{{pokemon.name}}</h2>
+                <h2>{{i}}{{pokemon.name}}</h2>
                 <img src={{pokemon.sprites}}>
             </div>
-        {% endfor %}
-    </body>
-</html>
+        <!-- {% set i = i + 1 %} -->
+        {% if i % 3 == 0 %}
+        </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
