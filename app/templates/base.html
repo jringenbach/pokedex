@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>{{ title }}</title>
+        <link href="{{ url_for('static', filename='app/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+        <link href="{{ url_for('static', filename='app/css/base.css') }}" rel="stylesheet" type="text/css" />
+        {% block css_script %}
+        {% endblock %}
+
+    </head>
+    <body>
+        <!-- Navigation bar-->
+        <div id="navbardiv">
+            {% block navigationbar %}
+
+            <!-- Home Button -->
+                <a class="navbar-brand" href="/">PokéAPI</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+            <!-- Pokedex button -->
+                <a class="navbar-brand" href="/pokedex">Pokedex</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                </button>
+            {% endblock %}                   
+        </div>
+          
+        <div class="container-fluid" id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+
+
+        <script src="{{ url_for('static', filename='app/js/jquery-3.4.1.min.js') }}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static', filename='app/js/bootstrap.bundle.min.js') }}" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

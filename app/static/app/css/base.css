@@ -1,0 +1,32 @@
+/*******************************/
+/* Barre de navigation du site */
+/*******************************/
+
+.navbar-brand{
+    color : white
+}
+
+#navbardiv{
+    background-color : #F24F51;
+    width : 100%;
+}
+
+
+
+/*******************************/
+/*     Contenu d'une page      */
+/*******************************/
+
+body{
+    background-color: #273237;
+}
+
+#content{
+    background-color : #EBF4EF;
+    margin-top : 5%;
+    width : 70%
+}
+
+.col-xl-4{
+    border : 1px black solid;
+}

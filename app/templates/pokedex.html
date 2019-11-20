@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block css_script %}
+    <link href="{{ url_for('static', filename='app/css/pokedex.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+<h1>Pokedex avec pokéAPI</h1>
+{% block content %}
+
+<!--Foreach pokemon we display their name and their sprites-->
+<div class="row justify-content-center">
+    {% for pokemon in list_pokemon %}
+        <div class="col-xl-4">
+            <div class="content-column-pokedex align-items-center">
+                <h2 class="mx-auto">{{pokemon.name}}</h2>
+                <img class="mx-auto" src={{pokemon.sprites}}>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
