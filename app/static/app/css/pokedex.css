@@ -1,3 +1,10 @@
 .content-column-pokedex{
     margin : auto;
 }
+
+/*L'intérieur de chaque colonne */
+#pokemon-container{
+    display: block;
+    text-align : center;
+    align-items: center;
+}

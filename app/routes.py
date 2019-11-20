@@ -17,5 +17,5 @@ def index():
 def pokedex():
     """Page affichant le pokédex"""
 
-    list_pokemon = PokemonAPI(params={"limit" : 18}).get_pokemon_from_api()
+    list_pokemon = PokemonAPI(params={"limit" : 100}).get_pokemon_from_api()
     return render_template("pokedex.html", title="Pokédex", list_pokemon=list_pokemon)

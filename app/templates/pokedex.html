@@ -11,9 +11,9 @@
 <div class="row justify-content-center">
     {% for pokemon in list_pokemon %}
         <div class="col-xl-4">
-            <div class="content-column-pokedex align-items-center">
-                <h2 class="mx-auto">{{pokemon.name}}</h2>
-                <img class="mx-auto" src={{pokemon.sprites}}>
+            <div class="container" id="pokemon-container">
+                <div class="row"><h2>{{pokemon.name}}</h2></div>
+                <div class="row"><img src={{pokemon.sprites}} id="pokemon-png"></div>
             </div>
         </div>
     {% endfor %}
