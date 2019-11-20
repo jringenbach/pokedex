@@ -8,3 +8,11 @@
     text-align : center;
     align-items: center;
 }
+
+h2{
+    margin : auto;
+}
+
+#pokemon-png{
+    margin: auto;
+}

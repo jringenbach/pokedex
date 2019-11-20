@@ -12,8 +12,8 @@
     {% for pokemon in list_pokemon %}
         <div class="col-xl-4">
             <div class="container" id="pokemon-container">
-                <div class="row"><h2>{{pokemon.name}}</h2></div>
-                <div class="row"><img src={{pokemon.sprites}} id="pokemon-png"></div>
+                <div><h2>{{pokemon.name}}</h2></div>
+                <div><img src={{pokemon.sprites}} id="pokemon-png"></div>
             </div>
         </div>
     {% endfor %}
